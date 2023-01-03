@@ -181,7 +181,7 @@
                                 <textarea class="form-contact" name = "msg" placeholder="Write Something..." style="padding: 20px 20px;" required><?php echo $msg; ?></textarea>
                                 <span class="text-danger"><?php echo $error['msg']; ?></span>
                             </div>
-                            <input type="submit" name="submit" value="Submit"class="btn btn-info">
+                            <input type="submit" name="submit" value="Submit" class="btn btn-dark">
                         </form>
                 </div>
              </div>

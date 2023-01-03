@@ -97,7 +97,7 @@
                     <label class="text-danger"><?php echo $errors['pwd'];?></label>
                 </div>
                 <label class="text-danger"><?php echo $errors['login'];?></label>
-                <input type="submit" name="submit" class="btn btn-light text-center" value="Sign In" style="font-size: 20px;">
+                <input type="submit" name="submit" class="btn btn-dark text-center" value="Sign In" style="font-size: 20px;">
             </form>
         </div>
         <div class="container-fluid text-center mt-5" style="background-color: rgba(255, 255, 255, 0.7); padding: 20px; position: absolute; bottom: 0; left: 0; ">

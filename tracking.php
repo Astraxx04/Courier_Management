@@ -121,7 +121,7 @@
                             <input type="text" style="border-radius: 8px;" name="tid" value="<?php echo $tid; ?>">
                             <label class="text-danger"><?php echo $error; ?></label>
                         </div>
-                        <input type="submit" name="track" class="btn btn-light text-center" value="Track" style="font-size: 20px;">
+                        <input type="submit" name="track" class="btn btn-dark text-center" value="Track" style="font-size: 20px;">
                     </form>
                 </div>
                 <div class="col-md-8 p-4 " style="background-color: rgba(255, 255, 255, 0.7); margin-top: 20px;">
@@ -138,7 +138,7 @@
                         <label>Unable to receive on the expected date?</label>
                         <form action="tracking.php" method="POST">
                             <label>Drop to a friend nearby in the your city.</label>
-                            <input type="submit" name="view" value="Update Delivery Address" class="btn btn-info">
+                            <input type="submit" name="view" value="Update Delivery Address" class="btn btn-info btn-dark">
                         </form>
                         <form action="tracking.php" method="POST" <?php echo $hidden; ?>>
                             <label>Friend's Details</label>
@@ -157,7 +157,7 @@
                                 <input type="text" name="fcontact" style="border-radius: 8px;" >
                                 <label class="text-danger"><?php echo $errors['cont'];?></label>
                             </div>
-                            <input type="submit" name="update" value="Update">
+                            <input type="submit" name="update" value="Update" class="btn btn-dark">
                         </form>
                     </div>
                 </div>
