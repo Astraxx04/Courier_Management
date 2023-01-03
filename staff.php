@@ -392,9 +392,10 @@
           
         <div class="container-fluid text-center mt-5" style="background-color: rgba(255, 255, 255, 0.7); padding: 20px; position: relative;">
             <div class="i-bar" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content:center; margin-bottom: 2em;">
-                <a class="fa fa-facebook " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
-                <a class="fa fa-instagram" href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
-                <a class="fa fa-envelope " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
+                <strong>Janesh Walia<a class="fa fa-github" href="https://github.com/Janesh7" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
+                <a class="fa fa-envelope" href="mailto:janeshwalia273@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <strong>Gagan S<a class="fa fa-github" href="https://github.com/Astraxx04" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
+                <a class="fa fa-envelope" href="mailto:gagan200254@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>
             </div>
             <p class="credit" style="font-size: 20px; font-stretch: 3px; text-align: center; color: black;">© CC COURIERS</p>
         </div>
