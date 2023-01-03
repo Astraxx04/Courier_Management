@@ -84,7 +84,7 @@
     <body style="font-family: Arial, Helvetica, sans-serif;">
         <div ><img src="Images/logo.png" id="logo" style="height: 100px !important;  margin-top: 10px !important;"  ></div>
         <div class="background"></div> 
-        <nav class="navbar navbar-toggleable-md navbar-expand-lg navbar-default navbar-light mb-10" style="background-color: rgba(255, 255, 255, 0.7); margin-bottom: 20px; margin-top:10px !important;">
+        <nav class="navbar navbar-toggleable-md navbar-expand-lg navbar-default navbar-dark mb-10" style="background-color: rgba(255, 255, 255, 0.7); margin-bottom: 20px; margin-top:10px !important;">
             <div class="container">
                 <button class="navbar-toggler text-dark" data-toggle="collapse" data-target="#mainNav">
                     <span class="navbar-toggler-icon"></span>
