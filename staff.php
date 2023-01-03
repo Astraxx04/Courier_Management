@@ -206,16 +206,16 @@
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form" method="POST">
                             <div class="row text-center">
                             <div class="col-md-6 p-3" style="background-color: rgba(255, 255, 255, 0.7);">
-                                <h1 class="mb-4">Sender's Details</h3>
+                                <h3 class="mb-3">Sender's Details</h3>
                                 <div class="form-group text-left pl-5">
-                                    <p><label>Name : </label>
+                                    <label>Name    : </label>
                                     <input type="text" name="sname" style="border-radius: 8px;">
-                                    <label class="text-danger"><?php echo $errors['req'];?></label></p>
+                                    <label class="text-danger"><?php echo $errors['req'];?></label>
                                 </div>
                                 <div class="form-group text-left pl-5">
-                                    <p><label>Address : </label>
+                                    <label>Address : </label>
                                     <input type="text" name="sadd" style="border-radius: 8px;">
-                                    <label class="text-danger"><?php echo $errors['req'];?></label></p>
+                                    <label class="text-danger"><?php echo $errors['req'];?></label>
                                 </div>
                                 <div class="form-group text-left pl-5">
                                     <label>City    : </label>
@@ -232,15 +232,9 @@
                                     <input type="text" name="scontact" style="border-radius: 8px;">
                                     <label class="text-danger"><?php echo $errors['req'];?></label>
                                 </div>
-                                <div class="form-group text-left pl-5">
-                                    <label>Weight : </label>
-                                    <input type="text" name="wgt" style="border-radius: 8px;">
-                                    <label class="text-danger"><?php echo $errors['req'];?></label>
-                                </div>
                             </div>
                             <div class="col-md-6 p-3" style="background-color: rgba(255, 255, 255, 0.7);">
-                                <h1 class="mb-4">Receiver's Details</h3>
-                                <form>
+                                <h3 class="mb-3">Receiver's Details</h3>
                                 <div class="form-group text-left pl-5">
                                     <label>Name : </label>
                                     <input type="text" name="rname" style="border-radius: 8px;">
@@ -266,8 +260,12 @@
                                     <input type="text" name="rcontact" style="border-radius: 8px;" >
                                     <label class="text-danger"><?php echo $errors['req'];?></label>
                                 </div>
-                                </form>
-                                <input type="submit" name="submit" value="Place order" class="btn btn-dark btn-lg">
+                                <div class="form-group text-left pl-5">
+                                    <label>Weight : </label>
+                                    <input type="text" name="wgt" style="border-radius: 8px;">
+                                    <label class="text-danger"><?php echo $errors['req'];?></label>
+                                </div>
+                                <input type="submit" name="submit" value="Place order" class="bt bt-primary">
                             </div>
                             </div>
                         </form>
@@ -283,7 +281,7 @@
                                         <input type="text" style="border-radius: 8px;" name="inp_tid" value="<?php echo $_SESSION['up_tid'] ?? $status['TrackingID']??'' ; ?>">
                                         <label class="text-danger"><?php echo $errors['status']??'';?></label>
                                     </div>
-                                    <input type="submit" name="sel_order" class="btn btn-dark text-center" value="Select" style="font-size: 20px;">
+                                    <input type="submit" name="sel_order" class="btn btn-light text-center" value="Select" style="font-size: 20px;">
                                 </form>
                             </div>
                             <div class="col-8 p-4 " style="background-color: rgba(255, 255, 255, 0.7); margin-top: 20px; ">
@@ -313,7 +311,7 @@
                                         <label>Delivered  </label>
                                         <?php echo $status['del']; ?>
                                     </div>
-                                    <input type="submit" name="update" value="Update Details" class="btn btn-dark btn-lg">
+                                    <input type="submit" name="update" value="Update Details" class="btn btn-light">
                                 </form>
                             </div>
                         </div>
@@ -394,10 +392,9 @@
           
         <div class="container-fluid text-center mt-5" style="background-color: rgba(255, 255, 255, 0.7); padding: 20px; position: relative;">
             <div class="i-bar" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content:center; margin-bottom: 2em;">
-                <strong>Janesh Walia<a class="fa fa-github" href="https://github.com/Janesh7" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
-                <a class="fa fa-envelope" href="mailto:janeshwalia273@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                <strong>Gagan S<a class="fa fa-github" href="https://github.com/Astraxx04" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
-                <a class="fa fa-envelope" href="mailto:gagan200254@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>
+                <a class="fa fa-facebook " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
+                <a class="fa fa-instagram" href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
+                <a class="fa fa-envelope " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
             </div>
             <p class="credit" style="font-size: 20px; font-stretch: 3px; text-align: center; color: black;">© CC COURIERS</p>
         </div>
