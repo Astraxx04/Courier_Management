@@ -113,7 +113,7 @@
                   <div class = "carousel-item active">
                      <img class = "d-block " 
                         src = "Images/c2.jpg" 
-                        alt = "First slide" style="height: 80vh; width: fit-content;">
+                        alt = "First slide" style="height: 80vh; width:fit-content;">
                   </div>
                   
                   <div class = "carousel-item">
@@ -129,7 +129,7 @@
                </div>
                
                <a class = "carousel-control-prev" href = "#carouselwithIndicators" role = "button" data-slide = "prev">
-                  <span class = "carousel-control-prev-icon" aria-hidden = "true" style="color: black;"></span>
+                  <span class = "carousel-control-prev-icon" aria-hidden = "true" style="color: black; margin: auto;"></span>
                   <span class = "sr-only">Previous</span>
                </a>
                
@@ -141,13 +141,13 @@
          </div>
          <div class="container" id="about" style="margin-top: 20px; width: 85%;">
              <div class="row">
-                <div class="col-md-6 p-5" style="background-color: rgba(255, 255, 255, 0.7); color: black; border-radius: 15px; ">
+                <div class="col-md-6 p-5" style="background-color: rgba(255, 255, 255, 0.7); color: black; border-radius: 5%; ">
                     <h2 class="display-5 text-center mb-3 pb-2" style="border-bottom: 2px solid white;">About Us</h2>
                     <p>The launch of CC Couriers from the house of CC Cargo services is exclusively designed to meet the commercial and personal shipment needs of our customers in both urban and rural destinations. We are emerging as a top destination for ‘same-day’ transportation and are continuously serving our customers 24/7/365. We constantly expand our resources to cater to our customer expectation addressing their unique market needs.</p>
                     <p class="pb-3" style="border-bottom: 2px solid white;">Having created a brand in the cargo industry we have ventured into the courier business with the same commitment. We offer flexible and faster delivery solutions. We have spread our footprints far and wide with our bouquet of products and services. We deliver promptly for all your time critical projects.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="Images/abt3.jpg" style="height: 500px; width: 100%; padding-top: 5%;" >
+                    <img src="Images/abt3.jpg" style="height: 570px;  width: 555px; padding-top: 0%; border-radius:5%;" >
                 </div>
              </div>
          </div>
@@ -167,18 +167,18 @@
                         <h4 style="border-bottom:2px solid white; padding-bottom:2px;">Contact Us</h4>
                         <form action="index.php" class="form text-left" method = "POST">
                             <div class="form-group">
-                                <label>Name : </label>
+                                <div><label>Name : </label></div>
                                 <input class="form-contact"  type="text" name = "name" value=<?php echo $name; ?>>
                                 <span class="text-danger"><?php echo $error['name']; ?></span>
                             </div>
                             <div class="form-group">
-                                <label>Email : </label>
+                                <div><label>Email : </label></div>
                                 <input class="form-contact"  type="text" name = "email" value=<?php echo $email; ?>>
                                 <span class="text-danger"><?php echo $error['email']; ?></span>
                             </div>
                             <div class="form-group">
-                                <label>Message : </label>
-                                <textarea class="form-contact" name = "msg" required><?php echo $msg; ?></textarea>
+                                <div><label>Message : </label></div>
+                                <textarea class="form-contact" name = "msg" placeholder="Write Something..." style="padding: 20px 20px;" required><?php echo $msg; ?></textarea>
                                 <span class="text-danger"><?php echo $error['msg']; ?></span>
                             </div>
                             <input type="submit" name="submit" value="Submit"class="btn btn-info">
@@ -189,9 +189,10 @@
          </div>
          <div class="container-fluid text-center mt-5" style="background-color: rgba(255, 255, 255, 0.7); padding: 20px; position: relative; ">
             <div class="i-bar" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content:center; margin-bottom: 2em;">
-                <a class="fa fa-facebook " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
-                <a class="fa fa-instagram" href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
-                <a class="fa fa-envelope " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
+                <strong>Janesh Walia<a class="fa fa-github" href="https://github.com/Janesh7" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
+                <a class="fa fa-envelope" href="mailto:janeshwalia273@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <strong>Gagan S<a class="fa fa-github" href="https://github.com/Astraxx04" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
+                <a class="fa fa-envelope" href="mailto:gagan200254@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>
             </div>
             <p class="credit" style="font-size: 20px; font-stretch: 3px; text-align: center; color: black;">© CC COURIERS</p>
         </div>
