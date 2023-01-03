@@ -87,12 +87,12 @@
             <img src="Images/userlogo.png" style="margin:0 auto; height: 140px; width: 140px; margin-bottom: 15px;">
             <form class="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div class="form-group">
-                    <label style="font-size: 20px;">Staff ID : </label>
+                    <label style="font-size: 25px;">Staff ID : </label>&nbsp 
                     <input type="text" style="border-radius: 8px;" name="id" value="<?php echo htmlspecialchars($id)?>" >
                     <label class="text-danger"><?php echo $errors['id'];?></label>
                 </div>
                 <div class="form-group">
-                    <label style="font-size: 20px;">Password : </label>
+                    <label style="font-size: 25px;">Password : </label> &nbsp
                     <input type="password" style="border-radius: 8px;" name="pwd" value="<?php echo htmlspecialchars($pwd)?>" >
                     <label class="text-danger"><?php echo $errors['pwd'];?></label>
                 </div>
@@ -102,9 +102,10 @@
         </div>
         <div class="container-fluid text-center mt-5" style="background-color: rgba(255, 255, 255, 0.7); padding: 20px; position: absolute; bottom: 0; left: 0; ">
             <div class="i-bar" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content:center; margin-bottom: 2em;">
-                <a class="fa fa-facebook " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
-                <a class="fa fa-instagram" href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
-                <a class="fa fa-envelope " href="#" style="border: none; text-decoration: none;  margin: 0em 1em; color:black; font-size: xx-large;"></a>
+                <strong>Janesh Walia<a class="fa fa-github" href="https://github.com/Janesh7" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
+                <a class="fa fa-envelope" href="mailto:janeshwalia273@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <strong>Gagan S<a class="fa fa-github" href="https://github.com/Astraxx04" target=blank style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a></strong>
+                <a class="fa fa-envelope" href="mailto:gagan200254@gmail.com" style="border: none; text-decoration: none;  margin: 0em 0.5em; color:black; font-size: xx-large;"></a>
             </div>
             <p class="credit" style="font-size: 20px; font-stretch: 3px; text-align: center; color: black;">© CC COURIERS</p>
         </div>
