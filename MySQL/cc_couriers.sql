@@ -246,7 +246,16 @@ INSERT INTO `pricing` (`S.No`, `State_1`, `State_2`, `Cost`) VALUES
 (4, 'Tamil Nadu', 'Maharashtra', 200),
 (5, 'Tamil Nadu', 'Delhi', 300),
 (6, 'Tamil Nadu', 'Uttar Pradesh', 350),
-(7, 'Tamil Nadu', 'West Bengal', 275);
+(7, 'Tamil Nadu', 'West Bengal', 275),
+(8, 'Karnataka', 'Tamil Nadu', 50),
+(9, 'Karnataka', 'Kerala', 100),
+(10, 'Karnataka', 'Andhra Pradhesh', 125),
+(11, 'Karnataka', 'Karnataka', 50),
+(12, 'Karnataka', 'Maharashtra', 200),
+(13, 'Karnataka', 'Delhi', 300),
+(14, 'Karnataka', 'Uttar Pradesh', 350),
+(15, 'Karnataka', 'West Bengal', 275);
+
 
 -- --------------------------------------------------------
 
