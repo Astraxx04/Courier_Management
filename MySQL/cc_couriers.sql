@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 31, 2021 at 09:40 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Host: localhost
+-- Generation Time: Jan 26, 2023 at 08:22 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -61,7 +60,7 @@ CREATE TABLE `branches` (
   `Contact` bigint(20) NOT NULL,
   `Email` varchar(40) NOT NULL,
   `Manager_id` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `branches`
@@ -83,7 +82,7 @@ INSERT INTO `branches` (`Branch_id`, `Address`, `Contact`, `Email`, `Manager_id`
 CREATE TABLE `credentials` (
   `StaffID` varchar(30) NOT NULL,
   `Pwd` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `credentials`
@@ -140,7 +139,7 @@ CREATE TABLE `feedback` (
   `Cust_name` varchar(30) NOT NULL,
   `Cust_mail` varchar(50) NOT NULL,
   `Cust_msg` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `feedback`
@@ -176,8 +175,8 @@ CREATE TABLE `parcel` (
   `R_Contact` bigint(20) NOT NULL,
   `Weight_Kg` decimal(10,2) NOT NULL,
   `Price` decimal(10,2) NOT NULL,
-  `Dispatched_Time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Dispatched_Time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `parcel`
@@ -206,7 +205,8 @@ INSERT INTO `parcel` (`TrackingID`, `StaffID`, `S_Name`, `S_Add`, `S_City`, `S_S
 (10825, 'CC3503', 'Alaric', '10, Salvatore Printing House', 'Chennai', 'Tamil Nadu', 9633221108, 'Dorian', '15, Amazon School bookstore', 'Hyderabad', 'Andhra Pradhesh', 9956823147, '23.00', '2875.00', '2022-12-29 09:45:53'),
 (10826, 'CC3503', 'Karthick', '78, Tatabad', 'Coimbatore', 'Tamil Nadu', 9417417410, 'Celine', '34, Cheta gardens', 'Alapuzha', 'Kerala', 9514236870, '3.50', '350.00', '2022-12-29 09:56:35'),
 (10827, 'CC3503', 'Karthick', '10, Jos Residency', 'Coimbatore', 'Tamil Nadu', 9485760123, 'Celine', '7/8, Arun excelo, Avadi', 'Chennai', 'Tamil Nadu', 9514236870, '3.00', '150.00', '2022-12-30 11:54:23'),
-(10828, 'CC3503', 'Jai', '6, Angel Residency', 'Trichy', 'Tamil Nadu', 9633221108, 'Arya', '34, Cheta gardens', 'Palakkad', 'Kerala', 9412365870, '5.00', '500.00', '2022-12-31 06:46:56');
+(10828, 'CC3503', 'Jai', '6, Angel Residency', 'Trichy', 'Tamil Nadu', 9633221108, 'Arya', '34, Cheta gardens', 'Palakkad', 'Kerala', 9412365870, '5.00', '500.00', '2022-12-31 06:46:56'),
+(10829, 'CC0101', 'Ram', '#21, Banashankari', 'Coimbatore', 'Tamil Nadu', 1234567890, 'JAN', '#69, MG Road', 'Coimbatore', 'Tamil Nadu', 2134567890, '10.00', '500.00', '2023-01-04 06:49:56');
 
 --
 -- Triggers `parcel`
@@ -232,7 +232,7 @@ CREATE TABLE `pricing` (
   `State_1` varchar(30) NOT NULL,
   `State_2` varchar(30) NOT NULL,
   `Cost` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `pricing`
@@ -256,7 +256,6 @@ INSERT INTO `pricing` (`S.No`, `State_1`, `State_2`, `Cost`) VALUES
 (14, 'Karnataka', 'Uttar Pradesh', 350),
 (15, 'Karnataka', 'West Bengal', 275);
 
-
 -- --------------------------------------------------------
 
 --
@@ -273,8 +272,8 @@ CREATE TABLE `staff` (
   `Salary` int(11) NOT NULL,
   `Mobile` bigint(20) NOT NULL,
   `Email` varchar(30) NOT NULL,
-  `Credits` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Credits` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `staff`
@@ -289,7 +288,7 @@ INSERT INTO `staff` (`StaffID`, `Name`, `Designation`, `Gender`, `DOB`, `DOJ`, `
 ('CC1234', 'Hayley Marshal', 'Branch Manager', 'Female', '1996-07-12', '2017-06-08', 42000, 9658741230, 'haymarsh@xyz.com', 5),
 ('CC5555', 'Josette', 'Staff', 'Female', '1989-05-09', '2019-05-15', 32000, 9856321470, 'jossie@xyz.com', 10),
 ('CC0369', 'Kai Parker', 'Staff', 'Male', '1994-08-08', '2021-04-15', 25000, 9630258741, 'meetkai@xyz.com', 0),
-('CC0101', 'Millie B', 'Staff', 'Female', '1998-03-12', '2020-12-12', 30000, 9871234560, 'milliebrown@xyz.com', 0),
+('CC0101', 'Millie B', 'Staff', 'Female', '1998-03-12', '2020-12-12', 30000, 9871234560, 'milliebrown@xyz.com', 5),
 ('CC1212', 'Klaus Mikelson', 'Branch Manager', 'Male', '1985-07-23', '2012-09-16', 55000, 9514782036, 'niklausmike@xyz.com', 5),
 ('CC3267', 'Tyler Lockwood', 'Staff', 'Male', '2000-05-13', '2021-05-03', 23000, 9546287130, 'tylerwood@xyz.com', 20);
 
@@ -306,7 +305,7 @@ CREATE TABLE `status` (
   `Shipped` timestamp NULL DEFAULT NULL,
   `Out_for_delivery` timestamp NULL DEFAULT NULL,
   `Delivered` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `status`
@@ -331,7 +330,8 @@ INSERT INTO `status` (`TrackingID`, `StaffID`, `Dispatched`, `Shipped`, `Out_for
 (10825, 'CC3503', '2022-12-29 09:45:53', '2022-12-29 09:51:16', NULL, NULL),
 (10826, 'CC3503', '2022-12-29 09:56:35', NULL, NULL, NULL),
 (10827, 'CC3503', '2022-12-30 11:54:23', NULL, NULL, NULL),
-(10828, 'CC3503', '2022-12-31 06:46:56', '2022-12-31 06:51:15', NULL, NULL);
+(10828, 'CC3503', '2022-12-31 06:46:56', '2022-12-31 06:51:15', NULL, NULL),
+(10829, 'CC0101', '2023-01-04 06:49:56', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -340,7 +340,7 @@ INSERT INTO `status` (`TrackingID`, `StaffID`, `Dispatched`, `Shipped`, `Out_for
 --
 DROP TABLE IF EXISTS `arrived`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `arrived`  AS  select `p`.`TrackingID` AS `TrackingID`,`p`.`StaffID` AS `StaffID`,`p`.`S_Name` AS `S_Name`,`p`.`S_Add` AS `S_Add`,`p`.`S_City` AS `S_City`,`p`.`S_State` AS `S_State`,`p`.`S_Contact` AS `S_Contact`,`p`.`R_Name` AS `R_Name`,`p`.`R_Add` AS `R_Add`,`p`.`R_City` AS `R_City`,`p`.`R_State` AS `R_State`,`p`.`R_Contact` AS `R_Contact`,`p`.`Weight_Kg` AS `Weight_Kg`,`p`.`Price` AS `Price`,`p`.`Dispatched_Time` AS `Dispatched_Time`,`s`.`Shipped` AS `Shipped`,`s`.`Out_for_delivery` AS `Out_for_delivery`,`s`.`Delivered` AS `Delivered` from (`parcel` `p` join `status` `s`) where ((`p`.`TrackingID` = `s`.`TrackingID`) and isnull(`s`.`Delivered`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `arrived`  AS SELECT `p`.`TrackingID` AS `TrackingID`, `p`.`StaffID` AS `StaffID`, `p`.`S_Name` AS `S_Name`, `p`.`S_Add` AS `S_Add`, `p`.`S_City` AS `S_City`, `p`.`S_State` AS `S_State`, `p`.`S_Contact` AS `S_Contact`, `p`.`R_Name` AS `R_Name`, `p`.`R_Add` AS `R_Add`, `p`.`R_City` AS `R_City`, `p`.`R_State` AS `R_State`, `p`.`R_Contact` AS `R_Contact`, `p`.`Weight_Kg` AS `Weight_Kg`, `p`.`Price` AS `Price`, `p`.`Dispatched_Time` AS `Dispatched_Time`, `s`.`Shipped` AS `Shipped`, `s`.`Out_for_delivery` AS `Out_for_delivery`, `s`.`Delivered` AS `Delivered` FROM (`parcel` `p` join `status` `s`) WHERE `p`.`TrackingID` = `s`.`TrackingID` AND `s`.`Delivered` is nullnull  ;
 
 -- --------------------------------------------------------
 
@@ -349,7 +349,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `delivered`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `delivered`  AS  select `p`.`TrackingID` AS `TrackingID`,`p`.`StaffID` AS `StaffID`,`p`.`S_Name` AS `S_Name`,`p`.`S_Add` AS `S_Add`,`p`.`S_City` AS `S_City`,`p`.`S_State` AS `S_State`,`p`.`S_Contact` AS `S_Contact`,`p`.`R_Name` AS `R_Name`,`p`.`R_Add` AS `R_Add`,`p`.`R_City` AS `R_City`,`p`.`R_State` AS `R_State`,`p`.`R_Contact` AS `R_Contact`,`p`.`Weight_Kg` AS `Weight_Kg`,`p`.`Price` AS `Price`,`p`.`Dispatched_Time` AS `Dispatched_Time`,`s`.`Shipped` AS `Shipped`,`s`.`Out_for_delivery` AS `Out_for_delivery`,`s`.`Delivered` AS `Delivered` from (`parcel` `p` join `status` `s`) where ((`p`.`TrackingID` = `s`.`TrackingID`) and (`s`.`Delivered` is not null)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `delivered`  AS SELECT `p`.`TrackingID` AS `TrackingID`, `p`.`StaffID` AS `StaffID`, `p`.`S_Name` AS `S_Name`, `p`.`S_Add` AS `S_Add`, `p`.`S_City` AS `S_City`, `p`.`S_State` AS `S_State`, `p`.`S_Contact` AS `S_Contact`, `p`.`R_Name` AS `R_Name`, `p`.`R_Add` AS `R_Add`, `p`.`R_City` AS `R_City`, `p`.`R_State` AS `R_State`, `p`.`R_Contact` AS `R_Contact`, `p`.`Weight_Kg` AS `Weight_Kg`, `p`.`Price` AS `Price`, `p`.`Dispatched_Time` AS `Dispatched_Time`, `s`.`Shipped` AS `Shipped`, `s`.`Out_for_delivery` AS `Out_for_delivery`, `s`.`Delivered` AS `Delivered` FROM (`parcel` `p` join `status` `s`) WHERE `p`.`TrackingID` = `s`.`TrackingID` AND `s`.`Delivered` is not nullnot null  ;
 
 --
 -- Indexes for dumped tables
@@ -420,13 +420,13 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `parcel`
 --
 ALTER TABLE `parcel`
-  MODIFY `TrackingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10829;
+  MODIFY `TrackingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10830;
 
 --
 -- AUTO_INCREMENT for table `pricing`
 --
 ALTER TABLE `pricing`
-  MODIFY `S.No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `S.No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
@@ -449,17 +449,6 @@ ALTER TABLE `staff`
 --
 ALTER TABLE `status`
   ADD CONSTRAINT `delivery_status` FOREIGN KEY (`TrackingID`) REFERENCES `parcel` (`TrackingID`);
-
-DELIMITER $$
---
--- Events
---
-SET GLOBAL event_scheduler = ON;
-CREATE DEFINER=`root`@`localhost` EVENT `resetCredits` ON SCHEDULE EVERY 1 MONTH STARTS '2022-12-01 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-update staff set Credits=0;
-END $$
-
-DELIMITER ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
