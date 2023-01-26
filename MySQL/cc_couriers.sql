@@ -8,6 +8,7 @@
 -- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -60,7 +61,7 @@ CREATE TABLE `branches` (
   `Contact` bigint(20) NOT NULL,
   `Email` varchar(40) NOT NULL,
   `Manager_id` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `branches`
@@ -82,7 +83,7 @@ INSERT INTO `branches` (`Branch_id`, `Address`, `Contact`, `Email`, `Manager_id`
 CREATE TABLE `credentials` (
   `StaffID` varchar(30) NOT NULL,
   `Pwd` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `credentials`
@@ -139,7 +140,7 @@ CREATE TABLE `feedback` (
   `Cust_name` varchar(30) NOT NULL,
   `Cust_mail` varchar(50) NOT NULL,
   `Cust_msg` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `feedback`
@@ -176,7 +177,7 @@ CREATE TABLE `parcel` (
   `Weight_Kg` decimal(10,2) NOT NULL,
   `Price` decimal(10,2) NOT NULL,
   `Dispatched_Time` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `parcel`
@@ -232,7 +233,7 @@ CREATE TABLE `pricing` (
   `State_1` varchar(30) NOT NULL,
   `State_2` varchar(30) NOT NULL,
   `Cost` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pricing`
@@ -273,7 +274,7 @@ CREATE TABLE `staff` (
   `Mobile` bigint(20) NOT NULL,
   `Email` varchar(30) NOT NULL,
   `Credits` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `staff`
@@ -340,7 +341,7 @@ INSERT INTO `status` (`TrackingID`, `StaffID`, `Dispatched`, `Shipped`, `Out_for
 --
 DROP TABLE IF EXISTS `arrived`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `arrived`  AS SELECT `p`.`TrackingID` AS `TrackingID`, `p`.`StaffID` AS `StaffID`, `p`.`S_Name` AS `S_Name`, `p`.`S_Add` AS `S_Add`, `p`.`S_City` AS `S_City`, `p`.`S_State` AS `S_State`, `p`.`S_Contact` AS `S_Contact`, `p`.`R_Name` AS `R_Name`, `p`.`R_Add` AS `R_Add`, `p`.`R_City` AS `R_City`, `p`.`R_State` AS `R_State`, `p`.`R_Contact` AS `R_Contact`, `p`.`Weight_Kg` AS `Weight_Kg`, `p`.`Price` AS `Price`, `p`.`Dispatched_Time` AS `Dispatched_Time`, `s`.`Shipped` AS `Shipped`, `s`.`Out_for_delivery` AS `Out_for_delivery`, `s`.`Delivered` AS `Delivered` FROM (`parcel` `p` join `status` `s`) WHERE `p`.`TrackingID` = `s`.`TrackingID` AND `s`.`Delivered` is nullnull  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `arrived`  AS  select `p`.`TrackingID` AS `TrackingID`,`p`.`StaffID` AS `StaffID`,`p`.`S_Name` AS `S_Name`,`p`.`S_Add` AS `S_Add`,`p`.`S_City` AS `S_City`,`p`.`S_State` AS `S_State`,`p`.`S_Contact` AS `S_Contact`,`p`.`R_Name` AS `R_Name`,`p`.`R_Add` AS `R_Add`,`p`.`R_City` AS `R_City`,`p`.`R_State` AS `R_State`,`p`.`R_Contact` AS `R_Contact`,`p`.`Weight_Kg` AS `Weight_Kg`,`p`.`Price` AS `Price`,`p`.`Dispatched_Time` AS `Dispatched_Time`,`s`.`Shipped` AS `Shipped`,`s`.`Out_for_delivery` AS `Out_for_delivery`,`s`.`Delivered` AS `Delivered` from (`parcel` `p` join `status` `s`) where ((`p`.`TrackingID` = `s`.`TrackingID`) and isnull(`s`.`Delivered`)) ;
 
 -- --------------------------------------------------------
 
@@ -349,7 +350,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `delivered`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `delivered`  AS SELECT `p`.`TrackingID` AS `TrackingID`, `p`.`StaffID` AS `StaffID`, `p`.`S_Name` AS `S_Name`, `p`.`S_Add` AS `S_Add`, `p`.`S_City` AS `S_City`, `p`.`S_State` AS `S_State`, `p`.`S_Contact` AS `S_Contact`, `p`.`R_Name` AS `R_Name`, `p`.`R_Add` AS `R_Add`, `p`.`R_City` AS `R_City`, `p`.`R_State` AS `R_State`, `p`.`R_Contact` AS `R_Contact`, `p`.`Weight_Kg` AS `Weight_Kg`, `p`.`Price` AS `Price`, `p`.`Dispatched_Time` AS `Dispatched_Time`, `s`.`Shipped` AS `Shipped`, `s`.`Out_for_delivery` AS `Out_for_delivery`, `s`.`Delivered` AS `Delivered` FROM (`parcel` `p` join `status` `s`) WHERE `p`.`TrackingID` = `s`.`TrackingID` AND `s`.`Delivered` is not nullnot null  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `delivered`  AS  select `p`.`TrackingID` AS `TrackingID`,`p`.`StaffID` AS `StaffID`,`p`.`S_Name` AS `S_Name`,`p`.`S_Add` AS `S_Add`,`p`.`S_City` AS `S_City`,`p`.`S_State` AS `S_State`,`p`.`S_Contact` AS `S_Contact`,`p`.`R_Name` AS `R_Name`,`p`.`R_Add` AS `R_Add`,`p`.`R_City` AS `R_City`,`p`.`R_State` AS `R_State`,`p`.`R_Contact` AS `R_Contact`,`p`.`Weight_Kg` AS `Weight_Kg`,`p`.`Price` AS `Price`,`p`.`Dispatched_Time` AS `Dispatched_Time`,`s`.`Shipped` AS `Shipped`,`s`.`Out_for_delivery` AS `Out_for_delivery`,`s`.`Delivered` AS `Delivered` from (`parcel` `p` join `status` `s`) where ((`p`.`TrackingID` = `s`.`TrackingID`) and (`s`.`Delivered` is not null)) ;
 
 --
 -- Indexes for dumped tables
@@ -449,6 +450,16 @@ ALTER TABLE `staff`
 --
 ALTER TABLE `status`
   ADD CONSTRAINT `delivery_status` FOREIGN KEY (`TrackingID`) REFERENCES `parcel` (`TrackingID`);
+
+DELIMITER $$
+--
+-- Events
+--
+CREATE DEFINER=`root`@`localhost` EVENT `resetCredits` ON SCHEDULE EVERY 1 MONTH STARTS '2021-05-01 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+update staff set Credits=0;
+END $$
+
+DELIMITER ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
