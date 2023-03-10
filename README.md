@@ -66,3 +66,27 @@ Project requires latest XAMPP server installed
 ```bash
   http://localhost/Courier_Management/
 ```
+## Screenshots
+
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot1.png?raw=true)
+
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot2.png?raw=true)
+
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot3.png?raw=true)
+
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot4.png?raw=true)
+
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot5.png?raw=true)
+
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot6.png?raw=true)
+
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot7.png?raw=true)
+
+## Documentation
+
+[Documentation](https://docs.google.com/document/d/1yBlEe80KEayqMtsQNkfZHeM4dW31LL6xImRPcGv4EPk/edit)
+
+## Authors
+
+- [@Gagan S](https://www.github.com/Astraxx04)
+- [@Janesh](https://www.github.com/Janesh7)
