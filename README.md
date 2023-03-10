@@ -68,19 +68,19 @@ Project requires latest XAMPP server installed
 ```
 ## Screenshots
 
-![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot1.png?raw=true)
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/main/Images/Snapshot1.png?raw=true)
 
-![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot2.png?raw=true)
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/main/Images/Snapshot2.png?raw=true)
 
-![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot3.png?raw=true)
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/main/Images/Snapshot3.png?raw=true)
 
-![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot4.png?raw=true)
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/main/Images/Snapshot4.png?raw=true)
 
-![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot5.png?raw=true)
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/main/Images/Snapshot5.png?raw=true)
 
-![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot6.png?raw=true)
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/main/Images/Snapshot6.png?raw=true)
 
-![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/screenshots/Images/Snapshot7.png?raw=true)
+![App Screenshot](https://github.com/Astraxx04/Courier_Management/blob/main/Images/Snapshot7.png?raw=true)
 
 ## Documentation
 
